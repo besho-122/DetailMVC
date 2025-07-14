@@ -1,0 +1,16 @@
+﻿@model Category
+
+<h1>Edit</h1>
+
+<form method="post" action="/categories/edit">
+	<div class="mb-3">
+		<input type="hidden" name="Id" class="form-control" value="@Model.Id" placeholder="Category ... Id" />
+		<span asp-validation-for="Id"></span>
+		<input type="text" name="Name" class="form-control" value="@Model.Name" placeholder="Category ... name" />
+		<span asp-validation-for="Name"></span>
+		<textarea class="form-control" name="Description" placeholder="Category..... description">@Model.Description</textarea>
+		<span asp-validation-for="Description"></span>
+		<button type="submit" clas="button">Save</button>
+	</div>
+
+</form>
